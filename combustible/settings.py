@@ -32,7 +32,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['squid-app-5j4xm.ondigitalocean.app','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['combustibles-transporteskasu-app-wlns2.ondigitalocean.app','127.0.0.1','localhost']
 
 
 # Application definition
