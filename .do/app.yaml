@@ -45,7 +45,7 @@ envs:
   - key: ALLOWED_HOSTS
     value: "combustibles-transporteskasu-app-wlns2.ondigitalocean.app"
   - key: USE_SPACES
-    value: "True"
+    value: "False"
   - key: DJANGO_SETTINGS_MODULE
     value: "combustible.settings"
   - key: PYTHONPATH
@@ -53,15 +53,15 @@ envs:
   - key: DJANGO_DB_URL
     value: "${combustible-db.DATABASE_URL}"
   - key: DO_SPACES_ACCESS_KEY
-    type: SECRET
+    type: DO004FQ7PGMGFNF39JRV
   - key: DO_SPACES_SECRET_KEY
-    type: SECRET
+    type: MTPiidUNvWkf9jwu4RopZ8JLe2fPWtRUtP70aioI+W8
   - key: DO_SPACES_BUCKET_NAME
-    value: ""
+    value: "disco-kasu"
   - key: DO_SPACES_ENDPOINT_URL
-    value: "https://nyc3.digitaloceanspaces.com"
+    value: "https://sfo3.digitaloceanspaces.com"
   - key: DO_SPACES_REGION
-    value: "nyc3"
+    value: "sfo3"
   - key: WHATSAPP_PHONE_NUMBER_ID
     type: SECRET
   - key: WHATSAPP_ACCESS_TOKEN
