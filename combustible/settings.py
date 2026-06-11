@@ -218,6 +218,8 @@ if config('USE_SPACES', default=False, cast=bool):
     STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'static'), ]
 else:
     # En desarrollo usar almacenamiento local
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+    DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

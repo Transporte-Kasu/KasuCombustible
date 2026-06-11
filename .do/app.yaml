@@ -7,6 +7,7 @@ services:
       repo: xoyoc/KasuCombustible
       branch: main
       deploy_on_push: true
+    build_command: python manage.py collectstatic --noinput && python manage.py migrate --noinput
     run_command: gunicorn --bind 0.0.0.0:$PORT combustible.wsgi:application --workers 2 --timeout 120
     environment_slug: python
     instance_count: 1
@@ -42,7 +43,7 @@ envs:
   - key: DEBUG
     value: "False"
   - key: ALLOWED_HOSTS
-    value: "squid-app-5j4xm.ondigitalocean.app"
+    value: "combustibles-transporteskasu-app-wlns2.ondigitalocean.app"
   - key: USE_SPACES
     value: "True"
   - key: DJANGO_SETTINGS_MODULE

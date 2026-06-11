@@ -89,8 +89,9 @@ class Equipo(models.Model):
     def proximo_mantenimiento(self):
         ultimo = self.mantenimientos.filter(completado=True).order_by('-fecha_completado').first()
         if ultimo:
-            fecha_base = ultimo.fecha_completado
-            km_base = ultimo.kilometraje_en_mantenimiento
+            fc = ultimo.fecha_completado
+            fecha_base = fc.date() if hasattr(fc, 'date') else (fc or timezone.now().date())
+            km_base = ultimo.kilometraje_en_mantenimiento if ultimo.kilometraje_en_mantenimiento is not None else self.kilometraje_actual
         else:
             fecha_base = timezone.now().date()
             km_base = self.kilometraje_actual

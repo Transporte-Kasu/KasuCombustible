@@ -21,11 +21,14 @@ class EquipoAdmin(admin.ModelAdmin):
     ordering = ['placa']
     
     fieldsets = (
+        ('Identificación', {
+            'fields': ('numero_economico', 'placa', 'niv')
+        }),
         ('Información Básica', {
-            'fields': ('placa', 'marca', 'modelo', 'year')
+            'fields': ('marca', 'modelo', 'year', 'tipo_combustible', 'asignacion')
         }),
         ('Especificaciones', {
-            'fields': ('capacidad_tanque', 'kilometraje_actual')
+            'fields': ('capacidad_tanque', 'rendimiento', 'kilometraje_actual')
         }),
         ('Estado', {
             'fields': ('activo',)
